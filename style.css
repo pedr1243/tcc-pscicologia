@@ -446,10 +446,11 @@ input:checked::before {
     .services-section {
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
 
     .service-card {
-        width: 90%;
+        width: 98%;
         height: auto;
     }
 
@@ -606,6 +607,34 @@ input:checked::before {
     }
 }
 
+@media (max-width: 480px) {
+    .conteudo-beneficios h3,
+    .conteudo-atendimento h3,
+    .conteudo-mudando h3 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .conteudo-beneficios p,
+    .conteudo-atendimento p,
+    .conteudo-mudando p {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+
+    .btn-iniciar {
+        font-size: 12px;
+        padding: 10px 20px;
+        margin-top: 15px;
+    }
+
+    .conteudo-beneficios,
+    .conteudo-atendimento,
+    .conteudo-mudando {
+        padding: 10px;
+    }
+}
+
 /* Consulta */
 .consulta {
     text-align: center;
@@ -667,19 +696,70 @@ h2 {
     color: var(--opcional-cor);
 }
 
+@media(max-width: 1024px) {
+    .cards {
+        gap: 15px;
+    }
+
+    .card {
+        max-width: 300px;
+        height: auto;
+        padding: 15px;
+    }
+
+    .card h3 {
+        font-size: 22px;
+    }
+
+    .card p {
+        font-size: 14px;
+    }
+
+    .icon {
+        font-size: 50px;
+    }
+}
+
 @media(max-width: 768px) {
     .cards {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
     }
 
     .card {
+        max-width: 100%;
         flex-grow: 1;
-        flex-basis: 200;
+        flex-basis: 45%;
+        margin: 10px 0;
     }
 }
 
-/* Citacão terapia */
+@media(max-width: 480px) {
+    h2 {
+        font-size: 24px;
+    }
+
+    .card {
+        max-width: 100%;
+        flex-basis: 100%;
+        padding: 10px;
+        margin: 5px 0;
+    }
+
+    .card h3 {
+        font-size: 20px;
+    }
+
+    .card p {
+        font-size: 12px;
+    }
+
+    .icon {
+        font-size: 35px;
+    }
+}
+/* Citação terapia */
 .quote-section {
     background-image: url(./img/sol.jpg);
     background-size: cover;
@@ -709,29 +789,30 @@ h2 {
     font-size: 32px;
     line-height: 1.5;
     font-weight: bold;
+    padding: 0 20px;
+}
+
+@media(max-width: 1024px) {
+    .quote-container p {
+        font-size: 25px;
+        padding: 15px;
+    }
 }
 
 @media(max-width: 768px) {
-
     .quote-container p {
         font-size: 20px;
-        padding: 0 10px;
-        border: 2px solid rgba(255, 0, 0, 0);
+        padding: 10px;
     }
 }
 
 @media(max-width: 468px) {
     .quote-container p {
         font-size: 18px;
+        padding: 5px;
     }
 }
 
-@media(max-width:1024px) {
-    .quote-container p {
-        font-size: 25px;
-        padding: 25px;
-    }
-}
 
 /* Info */
 .info-section {
@@ -743,9 +824,12 @@ h2 {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    height: 200px;
+    height: auto;
+    /* Ajusta a altura automaticamente */
     max-width: 1300px;
     margin: 0 auto;
+    flex-wrap: wrap;
+    /* Permite quebra de linha em telas menores */
 }
 
 .contact-info {
@@ -753,7 +837,8 @@ h2 {
 }
 
 .contact-info p {
-    font-size: 14px;
+    font-size: 16px;
+    /* Tamanho de fonte mais legível */
     margin-bottom: 10px;
 }
 
@@ -767,9 +852,12 @@ h2 {
 }
 
 .info-button {
-    height: 150px;
+    height: auto;
+    /* Altura ajustável */
     display: flex;
-    align-items: end;
+    align-items: center;
+    justify-content: center;
+    /* Centraliza verticalmente em telas menores */
 }
 
 #contactBtn {
@@ -790,12 +878,37 @@ h2 {
     transition-duration: 300ms;
 }
 
-/* Responsividade para telas menores */
+/* Responsividade para tablets e telas menores */
+@media (max-width: 1024px) {
+    .info-section {
+        padding: 20px 15px;
+    }
+
+    .contact-info {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .contact-info h1 {
+        font-size: 32px;
+        /* Reduz tamanho da fonte para telas médias */
+    }
+
+    .contact-info p {
+        font-size: 14px;
+    }
+
+    #contactBtn {
+        width: 100%;
+        /* Botão ocupa toda a largura disponível */
+    }
+}
+
+/* Responsividade para smartphones grandes */
 @media (max-width: 768px) {
     .info-section {
         flex-direction: column;
         text-align: center;
-        height: auto;
         padding: 30px 20px;
     }
 
@@ -806,29 +919,44 @@ h2 {
 
     .contact-info h1 {
         font-size: 28px;
+        /* Reduz ainda mais o tamanho do título */
+    }
+
+    .contact-info p {
+        font-size: 14px;
     }
 
     #contactBtn {
         width: 100%;
+        /* Botão ocupa toda a largura disponível */
+        padding: 15px;
     }
 }
 
+/* Responsividade para smartphones pequenos */
 @media (max-width: 480px) {
+    .info-section {
+        padding: 20px 15px;
+        /* Reduz o espaçamento interno */
+    }
+
     .contact-info h1 {
         font-size: 24px;
+        /* Reduz tamanho da fonte para títulos */
     }
 
     .contact-info p {
         font-size: 12px;
+        /* Texto menor para melhor ajuste */
     }
 
     #contactBtn {
         font-size: 14px;
         padding: 10px;
+        /* Botão menor com menos espaçamento */
     }
 }
-
-/* Comentarios dos clientes */
+/* Seção de Comentários dos Clientes */
 .testimonials {
     text-align: center;
     padding: 50px 0;
@@ -847,7 +975,6 @@ h2 {
 }
 
 .testemonial-cards {
-    border: none;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -863,7 +990,7 @@ h2 {
     margin: 10px;
     padding: 25px;
     cursor: pointer;
-    transition-duration: 300ms;
+    transition: transform 300ms, box-shadow 300ms;
 }
 
 .card-testemonial:hover {
@@ -873,18 +1000,9 @@ h2 {
     color: var(--opcional-cor);
 }
 
-.card-testemonial:hover h4 {
-    color: var(--opcional-cor);
-}
-
-.card-testemonial:hover p {
-    color: var(--opcional-cor);
-}
-
-.card-testemonial:hover blockquote {
-    color: var(--opcional-cor);
-}
-
+.card-testemonial:hover h4,
+.card-testemonial:hover p,
+.card-testemonial:hover blockquote,
 .card-testemonial:hover i {
     color: var(--opcional-cor);
 }
@@ -900,7 +1018,6 @@ blockquote i {
     transform: rotate(180deg);
 }
 
-
 blockquote p {
     margin-top: 15px;
     font-size: 18px;
@@ -914,11 +1031,9 @@ blockquote p {
     margin-left: 30px;
 }
 
-.customer-info i {
-    border: 1px solid black;
+.customer-info i,
+.img-info {
     border-radius: 50%;
-    font-size: 30px;
-    margin-right: 10px;
     height: 45px;
     width: 45px;
     display: flex;
@@ -926,15 +1041,10 @@ blockquote p {
     align-items: center;
 }
 
-.img-info {
-    border-radius: 50%;
+.customer-info i {
+    border: 1px solid black;
     font-size: 30px;
     margin-right: 10px;
-    height: 45px;
-    width: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .img-info img {
@@ -953,8 +1063,8 @@ blockquote p {
     color: var(--segunda-cor);
 }
 
-
-@media(max-width: 768px) {
+/* Responsividade */
+@media (max-width: 768px) {
     .testimonials {
         min-height: 100vh;
         width: 100%;
@@ -963,8 +1073,8 @@ blockquote p {
     .testemonial-cards {
         flex-direction: column;
         justify-content: center;
-        min-width: 100%;
         align-items: center;
+        width: 100%;
     }
 
     .card-testemonial {
@@ -977,7 +1087,38 @@ blockquote p {
     }
 }
 
-/* section perguntas */
+@media (max-width: 480px) {
+    .testimonials h1 {
+        font-size: 28px;
+    }
+
+    .testimonials h3 {
+        font-size: 18px;
+    }
+
+    .card-testemonial {
+        width: 95%;
+        padding: 20px;
+    }
+
+    blockquote p {
+        font-size: 16px;
+        margin-left: 15px;
+    }
+    .customer-info{
+        gap: 5px;
+    }
+
+    .customer-info h4 {
+        font-size: 14px;
+    }
+
+    .customer-info p {
+        font-size: 12px;
+    }
+}
+
+/* Seção Perguntas */
 .section-perguntas {
     min-height: 100vh;
     width: 100%;
@@ -1049,18 +1190,42 @@ blockquote p {
     opacity: 1;
 }
 
-
-@media(max-width:768px) {
+/* Responsividade */
+@media (max-width: 1024px) {
     .section-perguntas {
         min-height: auto;
-        width: 100%;
         flex-direction: column;
     }
 
     .container-faq {
-        order: 2;
-        height: auto;
         width: 90%;
+        order: 2;
+    }
+
+    .img-perguntas {
+        width: 90%;
+        height: 500px;
+        margin-right: 30px;
+        margin-top: 20px;
+        order: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-perguntas {
+        min-height: auto;
+        flex-direction: column;
+    }
+
+    .container-faq {
+        width: 90%;
+        order: 2;
+    }
+
+    .img-perguntas {
+        width: 90%;
+        height: 50vh;
+        order: 1;
     }
 
     .pergunta {
@@ -1071,33 +1236,19 @@ blockquote p {
     .pergunta span {
         margin-left: 10px;
     }
-
-    .img-perguntas {
-        order: 1;
-        width: 90%;
-        height: 300px;
-    }
 }
 
-@media(max-width:1024px) {
-    .section-perguntas {
-        min-height: auto;
-        width: 100%;
-        flex-direction: column;
+@media (max-width: 480px) {
+    .container-faq h1 {
+        font-size: 24px;
     }
 
-    .container-faq {
-        order: 2;
-        min-height: auto;
-        width: 90%;
+    .pergunta {
+        font-size: 14px;
     }
 
-    .img-perguntas {
-        order: 1;
-        width: 90%;
-        height: 500px;
-        margin-right: 30px;
-        margin-top: 20px;
+    .resposta {
+        font-size: 12px;
     }
 }
 
