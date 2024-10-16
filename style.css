@@ -22,473 +22,462 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* Header */
-header {
-    display: flex; /* Utiliza flexbox para o layout do cabeçalho */
-    justify-content: space-between; /* Espaçamento entre os itens */
-    align-items: center; /* Centraliza os itens verticalmente */
-    padding: 20px; /* Espaçamento interno do cabeçalho */
-    background-color: var(--opcional-cor); /* Cor de fundo definida por variável */
-    position: relative; /* Posição relativa para empilhamento */
-    z-index: 10; /* Prioridade na camada */
+Claro ! Aqui está o código CSS sem os comentários: ```css header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--opcional-cor);
+    position: relative;
+    z-index: 10;
 }
 
 .logo {
-    display: flex; /* Utiliza flexbox para o layout do logo */
-    align-items: center; /* Centraliza verticalmente os itens do logo */
+    display: flex;
+    align-items: center;
 }
 
 .logo h3 {
-    font-size: 18px; /* Tamanho da fonte do título */
-    color: var(--segunda-cor); /* Cor do texto do título */
-    margin-left: 5px; /* Espaçamento à esquerda do título */
+    font-size: 18px;
+    color: var(--segunda-cor);
+    margin-left: 5px;
 }
 
 .logo a {
-    text-decoration: none; /* Remove o sublinhado do link */
-    font-size: 50px; /* Tamanho da fonte do link */
-    color: var(--quinta-cor); /* Cor do link */
+    text-decoration: none;
+    font-size: 50px;
+    color: var(--quinta-cor);
 }
 
 nav ul {
-    list-style-type: none; /* Remove marcadores da lista */
-    display: flex; /* Utiliza flexbox para o layout da lista de navegação */
-    gap: 30px; /* Espaçamento entre os itens da lista */
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
 }
 
-/* Classe para ocultar o scroll */
 .no-scroll {
-    overflow: hidden; /* Oculta a barra de rolagem */
+    overflow: hidden;
 }
 
 nav ul li {
-    list-style: none; /* Remove marcadores dos itens da lista */
+    list-style: none;
 }
 
 nav ul li a {
-    text-decoration: none; /* Remove o sublinhado dos links */
-    color: var(--segunda-cor); /* Cor dos links */
-    font-weight: bold; /* Negrito para os links */
+    text-decoration: none;
+    color: var(--segunda-cor);
+    font-weight: bold;
 }
 
 nav ul li a:hover {
-    color: var(--quinta-cor); /* Cor ao passar o mouse sobre os links */
+    color: var(--quinta-cor);
 }
 
-/* Botões ou ícones */
 .icons {
-    display: flex; /* Utiliza flexbox para o layout dos ícones */
+    display: flex;
 }
 
 input {
-    appearance: none; /* Remove estilos padrão do input */
-    cursor: pointer; /* Cursor em forma de ponteiro ao passar sobre o input */
-    padding: 15px 25px; /* Espaçamento interno do botão */
-    background-color: var(--quarta-cor); /* Cor de fundo do botão */
-    border-radius: 5px; /* Bordas arredondadas */
-    font-weight: 600; /* Negrito para o texto */
+    appearance: none;
+    cursor: pointer;
+    padding: 15px 25px;
+    background-color: var(--quarta-cor);
+    border-radius: 5px;
+    font-weight: 600;
 }
 
 input::before {
-    content: 'Login'; /* Texto padrão do botão */
-    color: var(--opcional-cor); /* Cor do texto */
+    content: 'Login';
+    color: var(--opcional-cor);
 }
 
 input:checked::before {
-    content: 'Log out'; /* Texto quando o botão está ativo */
-    color: var(--opcional-cor); /* Cor do texto */
+    content: 'Log out';
+    color: var(--opcional-cor);
 }
 
 .hamburguer {
-    display: none; /* Inicialmente oculta o ícone do menu hamburguer */
-    font-size: 24px; /* Tamanho da fonte do ícone */
-    cursor: pointer; /* Cursor em forma de ponteiro ao passar sobre o ícone */
-    color: var(--quarta-cor); /* Cor do ícone */
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--quarta-cor);
 }
 
-/* Estilos para dispositivos móveis */
 @media (max-width: 768px) {
     .hamburguer {
-        display: block; /* Mostra o ícone do menu hamburguer em telas pequenas */
-        font-size: 35px; /* Aumenta o tamanho do ícone */
-        position: relative; /* Posição relativa para empilhamento */
-        z-index: 13; /* Prioridade na camada */
+        display: block;
+        font-size: 35px;
+        position: relative;
+        z-index: 13;
     }
 
     .icons {
-        display: none; /* Oculta os ícones em telas pequenas */
+        display: none;
     }
 
     nav ul {
-        border-radius: 3px; /* Bordas arredondadas na lista */
-        flex-direction: column; /* Alinha itens da lista verticalmente */
-        align-items: center; /* Centraliza os itens da lista */
+        border-radius: 3px;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
         text-align: center;
-        display: none; /* Inicialmente oculta a lista de navegação */
-        position: absolute; /* Posiciona a lista em relação ao seu pai */
-        z-index: 9; /* Prioridade na camada */
-        width: 100%; /* Largura total */
-        height: 100dvh; /* Altura da viewport */
-        top: 0; /* Alinha ao topo */
-        left: 0; /* Alinha à esquerda */
-        right: 0; /* Alinha à direita */
-        background-color: rgba(0, 0, 0, 0.853); /* Cor de fundo semi-transparente */
-        padding: 20px 0; /* Espaçamento interno da lista */
+        display: none;
+        position: absolute;
+        z-index: 9;
+        width: 100%;
+        height: 100dvh;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.853);
+        padding: 20px 0;
     }
 
     nav ul.active {
-        display: flex; /* Mostra a lista de navegação quando ativa */
+        display: flex;
     }
 
     nav ul li {
-        width: 50%; /* Largura dos itens da lista */
-        padding: 10px; /* Espaçamento interno dos itens */
-        text-align: center; /* Centraliza texto nos itens */
-        border-radius: 5px; /* Bordas arredondadas nos itens */
+        width: 50%;
+        padding: 10px;
+        text-align: center;
+        border-radius: 5px;
     }
 
     nav ul li a {
-        color: var(--opcional-cor); /* Cor do texto dos links */
-        font-size: 18px; /* Tamanho da fonte dos links */
+        color: var(--opcional-cor);
+        font-size: 18px;
     }
 
     nav ul li:hover {
-        background-color: var(--segunda-cor); /* Cor de fundo ao passar o mouse nos itens */
+        background-color: var(--segunda-cor);
     }
 
     header input {
-        display: none; /* Oculta o botão de login em telas pequenas */
+        display: none;
     }
 }
 
-/* Ajustes para telas muito pequenas */
 @media (mx-width: 480px) {
     nav ul {
-        top: 50px; /* Ajusta a posição superior da lista */
+        top: 50px;
     }
 }
+
 
 /* Hero */
 .hero {
-    display: flex; /* Utiliza flexbox para o layout da seção hero */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    min-height: 80vh; /* Altura mínima da seção hero */
-    background-color: var(--quinta-cor); /* Cor de fundo */
-    color: var(--opcional-cor); /* Cor do texto */
-    text-align: center; /* Centraliza texto */
-    padding: 100px 20px; /* Espaçamento interno */
-    background-image: url(./img/img-parallax.jpg); /* Imagem de fundo */
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Não repete a imagem */
-    background-size: cover; /* Cobre a área disponível */
-    background-attachment: fixed; /* Imagem fixa ao rolar */
-    background-blend-mode: multiply; /* Mistura a imagem de fundo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background-color: var(--quinta-cor);
+    color: var(--opcional-cor);
+    text-align: center;
+    padding: 100px 20px;
+    background-image: url(./img/img-parallax.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
 }
 
 .hero-content h1 {
-    font-size: 40px; /* Tamanho da fonte do título */
-    margin: 0; /* Remove margem */
-    text-align: center; /* Centraliza o título */
+    font-size: 40px;
+    margin: 0;
+    text-align: center;
 }
 
-/* Ajustes para telas pequenas na seção hero */
 @media(max-width: 768px) {
     .hero {
-        min-height: 100vh; /* Aumenta a altura mínima em telas pequenas */
-        padding: 80px 10px; /* Reduz espaçamento interno */
+        min-height: 100vh;
+        padding: 80px 10px;
     }
 
     .hero-content h1 {
-        font-size: 36px; /* Reduz tamanho da fonte do título */
+        font-size: 36px;
     }
 }
 
 @media(max-width: 468px) {
     .hero {
-        padding: 60px 10px; /* Ajusta o espaçamento em telas menores */
+        padding: 60px 10px;
     }
 
     .hero-content h1 {
-        font-size: 28px; /* Reduz ainda mais o tamanho da fonte */
+        font-size: 28px;
     }
 }
 
-/* Contato rápido */
 .quick-contact {
-    background-color: var(--opcional-cor); /* Cor de fundo */
-    padding: 30px 0; /* Espaçamento interno */
-    text-align: start; /* Alinha texto à esquerda */
+    background-color: var(--opcional-cor);
+    padding: 30px 0;
+    text-align: start;
 }
 
 .contact-container {
-    border: 1px solid #999; /* Borda ao redor do container */
-    border-radius: 3px; /* Bordas arredondadas */
-    max-width: 1300px; /* Largura máxima do container */
-    margin: 0 auto; /* Centraliza o container */
-    padding: 30px; /* Espaçamento interno */
-    box-shadow: 0 2px 4px var #999; /* Sombra ao redor do container */
+    border: 1px solid #999;
+    border-radius: 3px;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 30px;
+    box-shadow: 0 2px 4px var #999;
 }
 
 .contact-container h2 {
-    font-size: 24px; /* Tamanho da fonte do título */
-    font-weight: bold; /* Negrito para o título */
-    margin-bottom: 20px; /* Espaçamento abaixo do título */
-    color: #222; /* Cor do texto do título */
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #222;
 }
 
 .contact-form {
-    display: flex; /* Utiliza flexbox para o layout do formulário */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    gap: 15px; /* Espaçamento entre os campos do formulário */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
 }
 
 .contact-form input[type="text"] {
-    width: calc(50% - 10px); /* Largura dos campos do formulário */
-    padding: 15px 0px; /* Espaçamento interno dos campos */
-    border: 1px solid var(--segunda-cor); /* Borda dos campos */
-    background-color: transparent; /* Fundo transparente */
-    border-radius: 5px; /* Bordas arredondadas */
-    font-size: 16px; /* Tamanho da fonte dos campos */
+    width: calc(50% - 10px);
+    padding: 15px 0px;
+    border: 1px solid var(--segunda-cor);
+    background-color: transparent;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
 .btn-contact-form {
-    background-color: var(--quarta-cor); /* Cor de fundo do botão */
-    text-decoration: none; /* Remove sublinhado do botão */
-    padding: 15px 30px; /* Espaçamento interno do botão */
-    color: var(--opcional-cor); /* Cor do texto do botão */
-    border: none; /* Sem borda */
-    border-radius: 3px; /* Bordas arredondadas */
-    font-size: 18px; /* Tamanho da fonte do botão */
-    text-align: center; /* Centraliza texto no botão */
-    transition: background-color 0.3s ease; /* Transição suave para mudança de cor */
-    cursor: pointer; /* Cursor em forma de ponteiro ao passar sobre o botão */
+    background-color: var(--quarta-cor);
+    text-decoration: none;
+    padding: 15px 30px;
+    color: var(--opcional-cor);
+    border: none;
+    border-radius: 3px;
+    font-size: 18px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
 .btn-contact-form:hover {
-    background-color: var(--segunda-cor); /* Cor de fundo ao passar o mouse sobre o botão */
+    background-color: var(--segunda-cor);
 }
 
-/* Ajustes para telas pequenas no formulário de contato */
 @media(max-width: 768px) {
     .contact-form {
-        max-width: 100%; /* Largura máxima em telas pequenas */
-        margin: 5px; /* Margem ao redor do formulário */
-        flex-direction: column; /* Alinha campos do formulário verticalmente */
-        gap: 10px; /* Espaçamento entre campos */
+        max-width: 100%;
+        margin: 5px;
+        flex-direction: column;
+        gap: 10px;
     }
 
     .contact-form input[type="text"] {
-        width: 100%; /* Largura total dos campos em telas pequenas */
+        width: 100%;
     }
 
     .btn-contact-form {
-        width: 100%; /* Largura total do botão em telas pequenas */
-        padding: 15px 0; /* Ajusta espaçamento interno do botão */
+        width: 100%;
+        padding: 15px 0;
     }
 }
 
-/* Orientação psicológica */
 .orientacao-psicologica {
-    background-color: var(--terceira-cor); /* Cor de fundo da seção */
-    padding: 50px 20px; /* Espaçamento interno da seção */
-    text-align: center; /* Centraliza texto na seção */
-    color: var(--opcional-cor); /* Cor do texto */
+    background-color: var(--terceira-cor);
+    padding: 50px 20px;
+    text-align: center;
+    color: var(--opcional-cor);
 }
 
 .orientacao-guia h2 {
-    font-size: 28px; /* Tamanho da fonte do título */
-    margin-bottom: 15px; /* Espaçamento abaixo do título */
-    font-weight: bold; /* Negrito para o título */
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-weight: bold;
 }
 
 .orientacao-guia p {
-    font-size: 18px; /* Tamanho da fonte do parágrafo */
-    max-width: 600px; /* Largura máxima do parágrafo */
-    margin: 0 auto; /* Centraliza o parágrafo */
-    line-height: 1.5; /* Altura da linha para melhor legibilidade */
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
 }
 
-/* Ajustes para telas pequenas na seção de orientação */
 @media(max-width: 768px) {
     .orientacao-guia h2 {
-        font-size: 24px; /* Tamanho da fonte reduzido para o título */
+        font-size: 24px;
     }
 
     .orientacao-guia p {
-        font-size: 16px; /* Tamanho da fonte reduzido para o parágrafo */
+        font-size: 16px;
     }
 }
 
 @media(max-width: 468px) {
     .orientacao-guia h2 {
-        font-size: 20px; /* Tamanho ainda menor para o título */
+        font-size: 20px;
     }
 
     .orientacao-guia p {
-        font-size: 14px; /* Tamanho ainda menor para o parágrafo */
+        font-size: 14px;
     }
 }
 
+
 /* Serviços */
 .services-section {
-    display: flex; /* Utiliza flexbox para o layout dos serviços */
-    justify-content: center; /* Centraliza horizontalmente */
-    gap: 30px; /* Espaçamento entre os cartões de serviço */
-    padding: 40px 20px; /* Espaçamento interno da seção */
-    background-color: var(--opcional-cor); /* Cor de fundo da seção */
-    flex-wrap: wrap; /* Permite que os itens quebrem a linha */
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+    background-color: var(--opcional-cor);
+    flex-wrap: wrap;
 }
 
 .service-card {
-    border: 1px solid var(--quarta-cor); /* Borda ao redor do cartão de serviço */
-    background-color: var(--opcional-cor); /* Cor de fundo do cartão */
-    width: 350px; /* Largura do cartão */
-    height: 280px; /* Altura do cartão */
-    border-radius: 3px; /* Bordas arredondadas */
-    flex: 1; /* Permite que o cartão cresça */
-    margin: 10px; /* Margem ao redor do cartão */
-    padding: 20px; /* Espaçamento interno do cartão */
-    cursor: pointer; /* Cursor em forma de ponteiro ao passar sobre o cartão */
-    text-align: center; /* Centraliza texto no cartão */
-    transition-duration: 300ms; /* Duração da transição para efeitos */
+    border: 1px solid var(--quarta-cor);
+    background-color: var(--opcional-cor);
+    width: 350px;
+    height: 280px;
+    border-radius: 3px;
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    cursor: pointer;
+    text-align: center;
+    transition-duration: 300ms;
 }
 
 .service-card:hover {
-    background-color: var(--quarta-cor); /* Cor de fundo ao passar o mouse */
-    color: var(--opcional-cor); /* Cor do texto ao passar o mouse */
-    transform: translate(-1%, -1%) scale(1.0); /* Efeito de transformação ao passar o mouse */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.567); /* Sombra ao passar o mouse */
+    background-color: var(--quarta-cor);
+    color: var(--opcional-cor);
+    transform: translate(-1%, -1%) scale(1.0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.567);
 }
 
 .service-card:hover h3 {
-    color: var(--opcional-cor); /* Cor do título ao passar o mouse */
+    color: var(--opcional-cor);
 }
 
 .service-card:hover .icon-services {
-    color: var(--opcional-cor); /* Cor do ícone ao passar o mouse */
+    color: var(--opcional-cor);
 }
 
 .service-card h3 {
-    color: var(--segunda-cor); /* Cor do título do cartão */
-    font-size: 25px; /* Tamanho da fonte do título */
-    margin-bottom: 10px; /* Espaçamento abaixo do título */
+    color: var(--segunda-cor);
+    font-size: 25px;
+    margin-bottom: 10px;
 }
 
 .service-card p {
-    padding: 10px; /* Espaçamento interno do parágrafo */
-    font-size: 18px; /* Tamanho da fonte do parágrafo */
-    line-height: 1.5; /* Altura da linha para melhor legibilidade */
+    padding: 10px;
+    font-size: 18px;
+    line-height: 1.5;
 }
 
 .icon-services {
-    text-decoration: none; /* Remove sublinhado do ícone */
-    color: var(--quarta-cor); /* Cor do ícone */
-    font-size: 50px; /* Tamanho da fonte do ícone */
+    text-decoration: none;
+    color: var(--quarta-cor);
+    font-size: 50px;
 }
 
-/* Seção de botões */
 .buttons-section {
-    display: flex; /* Utiliza flexbox para o layout dos botões */
-    justify-content: center; /* Centraliza horizontalmente */
-    gap: 20px; /* Espaçamento entre os botões */
-    padding: 20px 0; /* Espaçamento interno da seção */
-    flex-wrap: wrap; /* Permite que os botões quebrem a linha */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+    flex-wrap: wrap;
 }
 
 .btn {
-    padding: 10px 20px; /* Espaçamento interno do botão */
-    font-size: 16px; /* Tamanho da fonte do botão */
-    border: none; /* Sem borda */
-    border-radius: 3px; /* Bordas arredondadas */
-    cursor: pointer; /* Cursor em forma de ponteiro ao passar sobre o botão */
-    font-weight: bold; /* Negrito para o texto do botão */
-    margin-bottom: 10px; /* Margem abaixo do botão */
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .btn.primary {
-    background-color: var(--quarta-cor); /* Cor de fundo do botão primário */
-    text-decoration: none; /* Remove sublinhado do botão */
-    padding: 15px 30px; /* Espaçamento interno do botão */
-    color: var(--opcional-cor); /* Cor do texto do botão */
-    border-radius: 3px; /* Bordas arredondadas */
-    font-size: 16px; /* Tamanho da fonte do botão */
-    text-align: center; /* Centraliza texto no botão */
-    display: inline-block; /* Permite que o botão se comporte como bloco */
-    margin-top: 15px; /* Margem acima do botão */
-    transition: background-color 0.3s ease; /* Transição suave para mudança de cor */
+    background-color: var(--quarta-cor);
+    text-decoration: none;
+    padding: 15px 30px;
+    color: var(--opcional-cor);
+    border-radius: 3px;
+    font-size: 16px;
+    text-align: center;
+    display: inline-block;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
 }
 
 .btn.secondary {
-    background-color: var(--opcional-cor); /* Cor de fundo do botão secundário */
-    border: 2px solid var(--quarta-cor); /* Borda do botão secundário */
-    text-decoration: none; /* Remove sublinhado do botão */
-    padding: 13px 60px; /* Espaçamento interno do botão */
-    color: var(--quarta-cor); /* Cor do texto do botão */
-    border-radius: 3px; /* Bordas arredondadas */
-    font-size: 16px; /* Tamanho da fonte do botão */
-    text-align: center; /* Centraliza texto no botão */
-    display: inline-block; /* Permite que o botão se comporte como bloco */
-    margin-top: 15px; /* Margem acima do botão */
-    transition: background-color 0.3s ease; /* Transição suave para mudança de cor */
+    background-color: var(--opcional-cor);
+    border: 2px solid var(--quarta-cor);
+    text-decoration: none;
+    padding: 13px 60px;
+    color: var(--quarta-cor);
+    border-radius: 3px;
+    font-size: 16px;
+    text-align: center;
+    display: inline-block;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
 }
 
 .btn.primary:hover {
-    background-color: var(--terceira-cor); /* Cor de fundo ao passar o mouse no botão primário */
+    background-color: var(--terceira-cor);
 }
 
 .btn.secondary:hover {
-    background-color: var(--quarta-cor); /* Cor de fundo ao passar o mouse no botão secundário */
-    color: var(--opcional-cor); /* Cor do texto ao passar o mouse no botão secundário */
+    background-color: var(--quarta-cor);
+    color: var(--opcional-cor);
 }
 
-/* Ajustes para telas pequenas na seção de serviços */
 @media(max-width: 1024px) {
     .service-card p {
-        font-size: 16px; /* Tamanho da fonte reduzido para o parágrafo */
-        line-height: 1.5; /* Altura da linha para melhor legibilidade */
+        font-size: 16px;
+        line-height: 1.5;
     }
 }
 
 @media(max-width: 768px) {
     .services-section {
-        display: flex; /* Mantém o layout flexível */
-        flex-direction: column; /* Permite que os itens quebrem a linha */
+        display: flex;
+        flex-direction: column;
     }
 
     .service-card {
-        width: 90%; /* Largura dos cartões em telas pequenas */
-        height: auto; /* Altura automática para melhor ajuste */
+        width: 90%;
+        height: auto;
     }
 
     .buttons-section {
-        flex-direction: column; /* Alinha botões verticalmente */
-        align-items: center; /* Centraliza os botões */
-        gap: 3px; /* Espaçamento entre botões */
+        flex-direction: column;
+        align-items: center;
+        gap: 3px;
     }
 
     .btn {
-        width: 80%; /* Largura dos botões em telas pequenas */
+        width: 80%;
     }
 }
 
 @media(max-width: 468px) {
     .service-card h3 {
-        font-size: 18px; /* Tamanho reduzido para o título */
+        font-size: 18px;
     }
 
     .service-card p {
-        font-size: 14px; /* Tamanho reduzido para o parágrafo */
+        font-size: 14px;
     }
 
     .btn {
-        font-size: 14px; /* Tamanho reduzido para o botão */
-        padding: 8px 16px; /* Ajuste no espaçamento interno do botão */
+        font-size: 14px;
+        padding: 8px 16px;
     }
 }
-
 
 /* Ordem */
 .ordem {
