@@ -22,7 +22,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
-Claro ! Aqui está o código CSS sem os comentários: ```css header {
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
