@@ -575,13 +575,16 @@ input:checked::before {
 
 @media(max-width: 768px) {
 
+    .ordem{
+        height: 230dvh;
+    }
     .beneficios,
     .atendimento,
     .mudando-vidas {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: auto;
+        max-height: auto;
     }
 
     .conteudo-beneficios,
@@ -591,7 +594,7 @@ input:checked::before {
     .img-beneficios,
     .img-mudando {
         width: 90%;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
     .conteudo-beneficios,
@@ -956,6 +959,7 @@ h2 {
         /* Botão menor com menos espaçamento */
     }
 }
+
 /* Seção de Comentários dos Clientes */
 .testimonials {
     text-align: center;
